@@ -17,7 +17,7 @@ EXPOSE 8000
 
 # Entrypoint
 ENTRYPOINT ["R", "-e", \
-"api_run <- plumber::plumb("api_setup.R"); \
+"api_run <- plumber::plumb('api_setup.R'); \
 api_run$run(host = '0.0.0.0', port=8000)"]
 
 CMD ["/api_setup.R"]
